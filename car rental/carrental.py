@@ -42,3 +42,12 @@ def show_vehicle_info(vehicle):
 
 car = Car("Toyota", "Corolla", 2020, 50, 5)
 bike = Bike("Yamaha", "R1", 2019, 30, 998)     
+
+show_vehicle_info(car)
+show_vehicle_info(bike)
+
+car_days = int(input(f"\nEnter the number of days you want to rent the {car.brand} {car.model}: "))
+bike_days = int(input(f"Enter the number of days you want to rent the {bike.brand} {bike.model}: "))
+
+print(f"\nRental cost for {car.brand} {car.model} for {car_days} days: ${car.calculate_rental_cost(car_days)}")
+print(f"Rental cost for {bike.brand} {bike.model} for {bike_days} days: ${bike.calculate_rental_cost(bike_days)}")
