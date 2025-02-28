@@ -5,4 +5,18 @@ class Vehicle:
         self.year = year
         self.__rental_price_per_day = rental_price_per_day
 #i have added a new method to the class Vehicle and it a private method it take the brand,model,year...etc
-        
+    def display_info(self):
+        print(f"{self.brand} {self.model}, Year: {self.year}, Rental Price: ${self.__rental_price_per_day}/day")
+    #i defined display_info method to display the brand,model,year and rental price of the vehicle
+    def calculate_rental_cost(self, days):
+        return self.__rental_price_per_day * days    
+    #i defined calculate_rental_cost method to calculate the rental cost of the vehicle by multiplying the rental price per day by the number of days
+    def get_rental_price_per_day(self):
+        return self.__rental_price_per_day
+    #i defined get_rental_price_per_day method to get the rental price per day of the vehicle
+    def set_rental_price_per_day(self, new_price):
+        if new_price > 0:
+            self.__rental_price_per_day = new_price
+        else:
+            print("Rental price must be positive.")
+    #i defined set_rental_price_per_day method to set the rental price per day of the vehicle        
