@@ -19,4 +19,12 @@ class Vehicle:
             self.__rental_price_per_day = new_price
         else:
             print("Rental price must be positive.")
-    #i defined set_rental_price_per_day method to set the rental price per day of the vehicle        
+    #i defined set_rental_price_per_day method to set the rental price per day of the vehicle    
+class Car(Vehicle):
+    def __init__(self, brand, model, year, rental_price_per_day, seating_capacity):
+        super().__init__(brand, model, year, rental_price_per_day)
+        self.seating_capacity = seating_capacity
+    #i have added a new method to the class Car and it takes the brand,model,year,rental price per day and seating capacity
+    def display_info(self):
+        print(f"Car: {self.brand} {self.model}, Year: {self.year}, Seats: {self.seating_capacity}, Rental Price: ${self.get_rental_price_per_day()}/day")
+    #i defined display_info method to display the brand,model,year,seating capacity and rental price of the car 
