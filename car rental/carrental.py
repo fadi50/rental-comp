@@ -51,3 +51,6 @@ bike_days = int(input(f"Enter the number of days you want to rent the {bike.bran
 
 print(f"\nRental cost for {car.brand} {car.model} for {car_days} days: ${car.calculate_rental_cost(car_days)}")
 print(f"Rental cost for {bike.brand} {bike.model} for {bike_days} days: ${bike.calculate_rental_cost(bike_days)}")
+
+car.set_rental_price_per_day(55)
+print(f"\nUpdated rental price for {car.brand} {car.model}: ${car.get_rental_price_per_day()}/day")
